@@ -1,5 +1,5 @@
-# Python_Project
-In This Repository, I Have Shown My Python Projects Which I Like 
+# Number-Guessing-Game
+In This Project, I added a difficulty level, Hints, and Maximum and minimum numbers.
 import random
 while True:
     minN = int(input("Choose the Minimum Number"))
