@@ -1,0 +1,21 @@
+import random
+
+words = ["Laptop", "Mobile", "Computer", "Earbuds", "Mouse", "Keyboard"]
+Secret_word = random.choice(words)
+        
+chances = 6
+
+while chances > 0:
+    guess = input("Let's Guess The Word")
+
+    if guess == Secret_word:
+        print(f"Congratulation You Have Guessed The Word: {word} ")
+        break
+    else:
+        chances -= 1
+        print(f"Wrong, Now You Have only {chances}")
+
+if chances == 0:
+    print(F"You Have Run Out: ")
+    print(F"The Exact Word is: {Secret_word}")
+        
