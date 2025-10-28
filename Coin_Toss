@@ -1,0 +1,13 @@
+import random
+
+Toss = input("What Your Call Heads or Tails: ").capitalize()
+
+print(f"You Choosed {Toss}")
+n = random.choice(["Heads", "Tails"])
+
+if Toss == n:
+        print("Congratulations You Have Won")
+        print(f"Computer Choosed {n}")
+else:
+    print("You Loss")
+    print(f"Computer Choosed {n}")
