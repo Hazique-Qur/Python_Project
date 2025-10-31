@@ -2,85 +2,117 @@ Score = 0
 print("Welcome to the Quiz Game!")
 print("You will be asked 5 questions. Choose the correct option by typing the letter corresponding to your answer.")
 print("Let's start!\n")
-for i in range(5):
-    print("Next question coming up...\n")
-questions1 = {"q" : "What is the next number in the series: 2, 4, 8, 16, ?", 
-            "options" : ["a) 3", "b) 5", "c) 32", "d) 64"], "answer" : "c"}
-
-print(questions1["q"])
-for option in questions1["options"]:
-    print(option)
-ans = input("Give Ur Answer: ")
-
-
-if ans == "c":
-    print(f"You chose option {ans}\nwhich is correct!")
-else:
-    print(f"You chose option {ans}\nYour answer is {ans}, which is incorrect!\nAnd Your score is {Score}")
-    print("The correct answer is c, which is 4. The series doubles each time: 2, 4, 8, 16, 32.")
-Score += 1
-questions2 = {"q" : "If ALL SQUARES are RECTANGLES, then:", 
-            "options" : ["A. All rectangles are squares",
-                         "B. All squares are circles",
-                         "C. All squares are rectangles",
-                         "D. All rectangles are squares"], "answer" : "c"}
-print(questions2["q"])
-for option in questions2["options"]:
-    print(option)
-ans = input("Give Ur Answer: ")
-
-if ans.lower() == "c":
-    print(f"You chose option {ans}\nwhich is correct!")
-else:
-    print(f"You chose option {ans}\nYour answer is {ans}, which is incorrect!")
-    print("The correct answer is C. All squares are rectangles, but not all rectangles are squares.")
-Score += 1
-questions3 = {
+while True:
+    # Question 1
+    questions1 = {
+        "q": "What is the next number in the series: 2, 4, 8, 16, ?",
+        "options": ["a) 3", "b) 5", "c) 32", "d) 64"],
+        "answer": "c"
+    }
+    
+    print(questions1["q"])
+    for option in questions1["options"]:
+        print(option)
+    ans = input("Give Your Answer: ").lower()
+    
+    if ans == questions1["answer"]:
+        print(f"You chose option {ans}, which is correct!\n")
+        Score += 1
+    else:
+        print(f"You chose option {ans}, which is incorrect!")
+        print("The correct answer is c (32). The series doubles each time: 2, 4, 8, 16, 32.\n")
+    
+    # Question 2
+    questions2 = {
+        "q": "If ALL SQUARES are RECTANGLES, then:",
+        "options": ["a) All rectangles are squares",
+                    "b) All squares are circles",
+                    "c) All squares are rectangles",
+                    "d) All rectangles are squares"],
+        "answer": "c"
+    }
+    
+    print(questions2["q"])
+    for option in questions2["options"]:
+        print(option)
+    ans = input("Give Your Answer: ").lower()
+    
+    if ans == questions2["answer"]:
+        print(f"You chose option {ans}, which is correct!\n")
+        Score += 1
+    else:
+        print(f"You chose option {ans}, which is incorrect!")
+        print("The correct answer is c. All squares are rectangles, but not all rectangles are squares.\n")
+    
+    # Question 3
+    questions3 = {
         "q": "What is the capital of Pakistan?",
         "options": ["a) Lahore", "b) Karachi", "c) Islamabad", "d) Peshawar"],
         "answer": "c"
     }
-print(questions3["q"])
-for option in questions3["options"]:
-    print(option)
-ans = input("Give Ur Answer: ")
-if ans.lower() == "c":
-    print(f"You chose option {ans}\nwhich is correct!")
-else:
-    print(f"You chose option {ans}\nYour answer is {ans}, which is incorrect!")
-    print("The correct answer is c. The capital of Pakistan is Islamabad.")
-Score += 1
-questions4 = {
+    
+    print(questions3["q"])
+    for option in questions3["options"]:
+        print(option)
+    ans = input("Give Your Answer: ").lower()
+    
+    if ans == questions3["answer"]:
+        print(f"You chose option {ans}, which is correct!\n")
+        Score += 1
+    else:
+        print(f"You chose option {ans}, which is incorrect!")
+        print("The correct answer is c. The capital of Pakistan is Islamabad.\n")
+    
+    # Question 4
+    questions4 = {
         "q": "What is the largest planet in our solar system?",
         "options": ["a) Earth", "b) Jupiter", "c) Saturn", "d) Mars"],
         "answer": "b"
     }
-
-print(questions4["q"])
-for option in questions4["options"]:
-    print(option)
-ans = input("Give Ur Answer: ")
-if ans.lower() == "b":  
-    print(f"You chose option {ans}\nwhich is correct!")
-else:
-    print(f"You chose option {ans}\nYour answer is {ans}, which is incorrect!")
-    print("The correct answer is b. Jupiter is the largest planet in our solar system.")
-Score += 1
-questions5 = {
+    
+    print(questions4["q"])
+    for option in questions4["options"]:
+        print(option)
+    ans = input("Give Your Answer: ").lower()
+    
+    if ans == questions4["answer"]:
+        print(f"You chose option {ans}, which is correct!\n")
+        Score += 1
+    else:
+        print(f"You chose option {ans}, which is incorrect!")
+        print("The correct answer is b. Jupiter is the largest planet in our solar system.\n")
+    
+    # Question 5
+    questions5 = {
         "q": "What is the chemical symbol for water?",
         "options": ["a) CO2", "b) H2O", "c) O2", "d) NaCl"],
         "answer": "b"
     }
-print(questions5["q"])
-for option in questions5["options"]:
-    print(option)
-ans = input("Give Ur Answer: ")
-if ans.lower() == "b":
-    print(f"You chose option {ans}\nwhich is correct!")
-else:
-    print(f"You chose option {ans}\nYour answer is {ans}, which is incorrect!")
-    print("The correct answer is b. The chemical symbol for water is H2O.")
-Score += 1
-print(f"Your final score is {Score} out of 5.")
-if Score == 5:
-    print("Congratulations! You got a perfect score!")
+    
+    print(questions5["q"])
+    for option in questions5["options"]:
+        print(option)
+    ans = input("Give Your Answer: ").lower()
+    
+    if ans == questions5["answer"]:
+        print(f"You chose option {ans}, which is correct!\n")
+        Score += 1
+    else:
+        print(f"You chose option {ans}, which is incorrect!")
+        print("The correct answer is b. The chemical symbol for water is H2O.\n")
+    
+    # Final Score
+    print(f"Your final score is {Score} out of 5.")
+    if Score == 5:
+        print("🎉 Congratulations! You got a perfect score!")
+    elif Score >= 3:
+        print("👍 Nice job! You did well.")
+    else:
+        print("Keep practicing! You’ll get better.")
+
+    Again = input("Do You want to Play Again (y/n): ")
+
+    if Again != 'y':
+        print("Thanks For Participate: ")
+        break
+        
